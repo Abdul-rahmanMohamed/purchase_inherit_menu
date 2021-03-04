@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+            id="id_report_template_email"
+            string="Request Report"
+            model="purchase.request"
+            report_type="qweb-pdf"
+            file="purchase_menu.report_template_mail"
+            name="purchase_menu.report_template_mail"/>
+</odoo>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <template id="report_template_mail">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <div class="oe_structure"/>
+                        <h2 class="mt16">
+                            <strong t-esc="doc.req_by"/>
+                        </h2>
+                        <div class="row mt32 mb32" id="informations">
+                            <div style="text-align: center">
+                                <div style="color:grey;">Here You Are , Your Report Of This Request</div>
+                            </div>
+                            <table style="width: 100%; border-spacing: 0; background-color: #80aaff; border: 3px solid #e7e7e7; border-top: True;">
+                                <tr>
+                                    <td>
+                                        <div class="col-auto mw-100 mb-2">
+                                            <strong>Request Name:</strong>
+                                            <p class="m-0" t-field="doc.req_name"/>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col-auto mw-100 mb-2">
+                                            <strong>Start Date:</strong>
+                                            <p class="m-0" t-field="doc.start_date"/>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col-auto mw-100 mb-2">
+                                            <strong>End Date:</strong>
+                                            <p class="m-0" t-field="doc.end_date"/>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
